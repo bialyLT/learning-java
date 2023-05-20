@@ -3,21 +3,22 @@
 // resultados deben mostrarse por pantalla.
 
 import java.util.Scanner;
+import java.lang.Math;
 
 
 public class Ej3 {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("ingrese un valor: ");
-            int num1 = scanner.nextInt();
+            double num1 = scanner.nextDouble();
             
             System.out.println("ingrese un valor: ");
-            int num2 = scanner.nextInt();
+            double num2 = scanner.nextDouble();
 
-            System.out.println("La suma de " + num1 + " y " + num2 + " es: " + (num1+num2));
-            System.out.println("La resta de " + num1 + " y " + num2 + " es: " + (num1-num2));
-            System.out.println("La multiplicacion de " + num1 + " y " + num2 + " es: " + (num1*num2));
-            System.out.println("La division de " + num1 + " y " + num2 + " es: " + (num1/num2));
+            System.out.println("La suma de " + Math.round(num1) + " y " + Math.round(num2) + " es: " + (Math.round(num1)+Math.round(num1)));
+            System.out.println("La resta de " + Math.round(num1) + " y " + Math.round(num1) + " es: " + (Math.round(num1)-Math.round(num1)));
+            System.out.println("La multiplicacion de " + Math.round(num1) + " y " + Math.round(num1) + " es: " + (Math.round(num1)*Math.round(num1)));
+            System.out.println("La division de " + Math.round(num1) + " y " + Math.round(num1) + " es: " + (num1/num2));
         }catch (Exception e) {
             System.out.println("Error al realizar las operaciones");
         }
